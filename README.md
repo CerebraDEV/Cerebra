@@ -76,10 +76,6 @@ CEREBRA is a decentralized platform that enables AI developers to train, share, 
 - [Development Roadmap](docs/ROADMAP.md)
 - [Release Notes](docs/RELEASE.md)
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
