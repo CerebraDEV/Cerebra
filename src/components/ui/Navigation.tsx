@@ -31,7 +31,16 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <img src="/images/logo.png" alt="CEREBRA" className="h-8 w-8 mr-2" />
+              <div className="relative w-8 h-8 mr-2">
+                <Image
+                  src="/images/logo.png"
+                  alt="CEREBRA"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  priority
+                />
+              </div>
               <span className="text-xl font-bold text-white">CEREBRA</span>
             </Link>
           </div>
