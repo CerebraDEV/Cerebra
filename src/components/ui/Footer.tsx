@@ -47,7 +47,17 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/CerebraDEV"
+                  href="https://www.cerebra.work"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white text-sm"
+                >
+                  Official Website
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/CerebraDEV/Cerebra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white text-sm"

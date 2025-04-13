@@ -21,9 +21,9 @@ const config = defaultWagmiConfig({
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '',
   metadata: {
     name: 'CEREBRA',
-    description: 'CEREBRA - Decentralized AI Training Platform',
+    description: 'Decentralized AI Training Platform',
     url: 'https://cerebra.ai',
-    icons: ['https://cerebra.ai/icon.png'],
+    icons: ['/images/logo.svg'],
   },
 }) as Config
 

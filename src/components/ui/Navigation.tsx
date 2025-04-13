@@ -31,12 +31,12 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="relative w-8 h-8 mr-2">
+              <div className="relative w-10 h-10 mr-2">
                 <Image
                   src="/images/logo.svg"
                   alt="CEREBRA"
-                  width={32}
-                  height={32}
+                  width={40}
+                  height={40}
                   className="object-contain"
                   priority
                 />
