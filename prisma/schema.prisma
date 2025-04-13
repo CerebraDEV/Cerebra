@@ -1,0 +1,173 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  memories      Memory[]
+  collections   Collection[]
+  walletAddress String?   @unique
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  role          Role      @default(USER)
+  preferences   Json?     // User preferences for AI and privacy settings
+}
+
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Memory {
+  id             String          @id @default(cuid())
+  title          String
+  content        String          @db.Text
+  type           MemoryType      // 'text', 'image', 'video', 'audio'
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  userId         String
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transformations Transformation[]
+  collections    Collection[]    @relation("MemoryToCollection")
+  privacyLevel   PrivacyLevel    @default(PRIVATE)
+  emotionalTone  String?         // AI-detected emotional tone
+  keyElements    String[]        // AI-extracted key elements
+  ipfsHash       String?         // IPFS hash for decentralized storage
+  nftTokenId     String?         // NFT token ID if minted
+  nftContractAddress String?     // NFT contract address
+  metadata       Json?           // Additional metadata
+}
+
+enum MemoryType {
+  TEXT
+  IMAGE
+  VIDEO
+  AUDIO
+  MIXED
+}
+
+enum PrivacyLevel {
+  PUBLIC
+  PRIVATE
+  FRIENDS
+  CUSTOM
+}
+
+model Transformation {
+  id              String        @id @default(cuid())
+  style           String        // Sci-fi style (cyberpunk, space opera, etc.)
+  content         String        @db.Text
+  imageUrl        String?
+  videoUrl        String?
+  audioUrl        String?
+  createdAt       DateTime      @default(now())
+  memoryId        String
+  memory          Memory        @relation(fields: [memoryId], references: [id], onDelete: Cascade)
+  ipfsHash        String?       // IPFS hash for decentralized storage
+  nftTokenId      String?       // NFT token ID if minted
+  nftContractAddress String?    // NFT contract address
+  metadata        Json?         // Additional metadata
+  emotionalPreservation Float?  // AI-measured emotional preservation score
+  worldBuilding   Json?         // Sci-fi world building elements
+}
+
+model Collection {
+  id          String    @id @default(cuid())
+  name        String
+  description String?   @db.Text
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  memories    Memory[]  @relation("MemoryToCollection")
+  isPublic    Boolean   @default(false)
+  theme       String?   // Collection theme or sci-fi universe
+  metadata    Json?     // Additional metadata
+}
+
+model SciFiStyle {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  description String    @db.Text
+  parameters  Json      // AI parameters for this style
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  isActive    Boolean   @default(true)
+}
+
+model Transaction {
+  id              String    @id @default(cuid())
+  type            TxType
+  amount          Float
+  tokenAddress    String?
+  fromAddress     String
+  toAddress       String
+  txHash          String    @unique
+  blockNumber     Int
+  timestamp       DateTime
+  status          TxStatus  @default(PENDING)
+  metadata        Json?
+}
+
+enum TxType {
+  NFT_MINT
+  NFT_TRANSFER
+  TOKEN_TRANSFER
+  SERVICE_PAYMENT
+}
+
+enum TxStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+} 
