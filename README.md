@@ -87,8 +87,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌐 Community
 
 - [Official Website](https://www.cerebra.work)
-- [Twitter](https://twitter.com/CerebraAI)
-- [GitHub](https://github.com/CerebraDEV)
+- [Twitter](https://x.com/Cerebra_X)
+- [GitHub](https://github.com/CerebraDEV/Cerebra)
 
 ## 🙏 Acknowledgments
 
