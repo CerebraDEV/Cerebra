@@ -1,7 +1,7 @@
 # CEREBRA
 
 <div align="center">
-  <img src="public/images/logo.svg" alt="CEREBRA Logo" width="120" height="120" />
+  <img src="public/images/logo.svg" alt="CEREBRA Logo" width="200" height="200" style="border-radius: 20px; margin: 20px 0;" />
   <h1>CEREBRA - Decentralized AI Training Platform</h1>
   <p>
     <strong>A blockchain-powered platform for training and monetizing AI models</strong>
