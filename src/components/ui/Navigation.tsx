@@ -33,7 +33,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <div className="relative w-8 h-8 mr-2">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.svg"
                   alt="CEREBRA"
                   width={32}
                   height={32}
@@ -46,19 +46,36 @@ export function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`text-sm font-medium ${
-                  isActive(item.path)
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link
+              href="/nft/collection"
+              className={`text-sm font-medium ${
+                isActive('/nft/collection')
+                  ? 'text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Collection
+            </Link>
+            <Link
+              href="/mint"
+              className={`text-sm font-medium ${
+                isActive('/mint')
+                  ? 'text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Mint
+            </Link>
+            <Link
+              href="/about"
+              className={`text-sm font-medium ${
+                isActive('/about')
+                  ? 'text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              About
+            </Link>
           </div>
 
           <div className="flex items-center">
