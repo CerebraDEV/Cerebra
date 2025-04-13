@@ -1,218 +1,105 @@
 # CEREBRA
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/CerebraDEV/Cerebra/main/public/logo.svg" alt="CEREBRA" width="200" height="200" />
-  <h1>CEREBRA</h1>
-  <p>Transform your memories into extraordinary sci-fi experiences</p>
+  <img src="public/images/logo.svg" alt="CEREBRA Logo" width="120" height="120" />
+  <h1>CEREBRA - Decentralized AI Training Platform</h1>
   <p>
-    <a href="https://www.cerebra.work" target="_blank">
-      <img src="https://img.shields.io/badge/website-cerebra.work-blue?style=flat-square" alt="Website" />
-    </a>
-    <a href="https://x.com/Cerebra_X" target="_blank">
-      <img src="https://img.shields.io/badge/twitter-@Cerebra__X-1D9BF0?style=flat-square&logo=twitter" alt="Twitter" />
-    </a>
-    <a href="https://github.com/CerebraDEV/Cerebra/blob/main/LICENSE">
-      <img src="https://img.shields.io/badge/license-Proprietary-red?style=flat-square" alt="License" />
-    </a>
+    <strong>A blockchain-powered platform for training and monetizing AI models</strong>
   </p>
 </div>
 
-Transform your personal memories into immersive sci-fi experiences using cutting-edge AI and blockchain technology.
+## 🚀 Overview
 
-## Project Structure
+CEREBRA is a decentralized platform that enables AI developers to train, share, and monetize their AI models using blockchain technology. The platform combines the power of Web3 with artificial intelligence to create a new ecosystem for AI model development and distribution.
 
-```
-cerebra/
-├── src/                      # Source code
-│   ├── app/                 # Next.js app directory
-│   │   ├── api/            # API routes
-│   │   ├── auth/           # Authentication pages
-│   │   └── ...            # Other pages
-│   ├── components/         # React components
-│   │   ├── nft/           # NFT-related components
-│   │   └── ui/            # UI components
-│   ├── hooks/             # Custom React hooks
-│   ├── lib/               # Utility functions
-│   └── test/              # Test files
-├── public/                 # Static files
-│   ├── assets/            # Static assets
-│   │   ├── images/        # Image files
-│   │   └── fonts/         # Font files
-│   └── logo.svg           # CEREBRA logo
-├── contracts/             # Smart contracts
-│   ├── CerebraNFT.sol     # NFT contract
-│   └── test/             # Contract tests
-├── scripts/               # Scripts
-│   ├── setup/            # Setup scripts
-│   ├── deploy/           # Deployment scripts
-│   └── test/            # Test scripts
-├── docs/                 # Documentation
-│   ├── api/             # API documentation
-│   └── guides/          # User guides
-├── prisma/               # Database schema
-└── config/              # Configuration files
-    ├── hardhat.config.js # Hardhat config
-    ├── tailwind.config.js # Tailwind config
-    └── tsconfig.json    # TypeScript config
-```
+## ✨ Features
 
-## Vision
+- **NFT Marketplace**: Tokenize and trade AI models as NFTs
+- **Decentralized Training**: Train AI models using distributed computing resources
+- **Community Governance**: Token holders participate in platform decisions
+- **Rewards System**: Earn tokens for contributing to the ecosystem
+- **Secure Storage**: Decentralized storage for AI models and data
+- **Web3 Integration**: Seamless wallet connection and blockchain interactions
 
-CEREBRA is more than a platform - it's a gateway to transform your personal memories into extraordinary sci-fi narratives. Every memory holds an undiscovered sci-fi world, and CEREBRA opens the door to that universe.
+## 🛠️ Technology Stack
 
-## Core Features
-
-- **AI-Powered Memory Analysis**: 
-  - Advanced AI models for identifying key elements and emotional tones in memory fragments
-  - Sophisticated sci-fi element injection algorithms
-  - Memory coherence engine for connecting fragments into complete narratives
-
-- **Multimedia Generation System**:
-  - Integrated text, image, and video generation
-  - Emotion-based visual style matching
-  - Dedicated sci-fi world-building maintenance
-
-- **Blockchain Integration**:
-  - On-chain verification of original memories and sci-fi transformations
-  - NFT-based memory artwork protection
-  - Distributed storage for permanent preservation
-
-- **Privacy-First Design**:
-  - Multi-layer encryption for sensitive content
-  - Granular privacy controls
-  - Ethical review mechanisms
-
-## Tech Stack
-
-- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS, Framer Motion
-- **Backend**: Next.js API Routes, Prisma, PostgreSQL
-- **AI/ML**: OpenAI API, Custom AI Models
-- **Blockchain**: Ethereum, IPFS
+- **Frontend**: Next.js 14, React, Tailwind CSS, Framer Motion
+- **Blockchain**: Ethereum, Solidity, Web3Modal
+- **AI/ML**: TensorFlow, PyTorch, Scikit-learn
+- **Storage**: IPFS, Filecoin
 - **Authentication**: NextAuth.js
-- **Storage**: AWS S3, IPFS
-- **Deployment**: Vercel
+- **Testing**: Jest, Vitest, React Testing Library
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ and npm
-- PostgreSQL database
-- OpenAI API key
-- Ethereum wallet (for Web3 features)
-- OAuth credentials (Google, GitHub)
+- Node.js 18.x or higher
+- npm or yarn
+- MetaMask or another Web3 wallet
+- Git
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:CerebraDEV/Cerebra.git
-   cd cerebra
+   git clone https://github.com/CerebraDEV/Cerebra.git
+   cd Cerebra
    ```
 
 2. Install dependencies:
    ```bash
    npm install
+   # or
+   yarn install
    ```
 
 3. Set up environment variables:
-   Create a `.env` file in the root directory with the following variables:
-   ```env
-   # Database
-   DATABASE_URL="postgresql://user:password@localhost:5432/cerebra"
-   
-   # OpenAI
-   OPENAI_API_KEY="your-openai-api-key"
-   
-   # Authentication
-   NEXTAUTH_URL="http://localhost:3000"
-   NEXTAUTH_SECRET="your-nextauth-secret"
-   GOOGLE_CLIENT_ID="your-google-client-id"
-   GOOGLE_CLIENT_SECRET="your-google-client-secret"
-   GITHUB_CLIENT_ID="your-github-client-id"
-   GITHUB_CLIENT_SECRET="your-github-client-secret"
-   
-   # Blockchain
-   NEXT_PUBLIC_CONTRACT_ADDRESS="your-contract-address"
-   NEXT_PUBLIC_ALCHEMY_API_KEY="your-alchemy-api-key"
-   
-   # Storage
-   AWS_ACCESS_KEY_ID="your-aws-access-key"
-   AWS_SECRET_ACCESS_KEY="your-aws-secret-key"
-   AWS_REGION="your-aws-region"
-   AWS_BUCKET_NAME="your-bucket-name"
-   ```
-
-4. Set up the database:
    ```bash
-   npx prisma migrate dev
+   cp .env.example .env.local
    ```
+   Edit `.env.local` with your configuration.
 
-5. Start the development server:
+4. Run the development server:
    ```bash
    npm run dev
+   # or
+   yarn dev
    ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Development
+## 📚 Documentation
 
-### Code Style
-- ESLint and Prettier are configured for consistent code formatting
-- TypeScript for type safety
-- Follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [API Documentation](docs/api/README.md)
+- [Smart Contracts](contracts/README.md)
+- [Development Roadmap](docs/ROADMAP.md)
+- [Release Notes](docs/RELEASE.md)
 
-### Testing
-- Jest and React Testing Library for testing
-- Run tests with `npm test`
-- Run tests in watch mode with `npm test:watch`
+## 🤝 Contributing
 
-### Database
-- Prisma for type-safe database access
-- Run migrations with `npx prisma migrate dev`
-- Generate Prisma client with `npx prisma generate`
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### AI Integration
-- OpenAI API with custom prompts
-- Configure AI models in `src/lib/ai.ts`
-- Test AI features with `npm run test:ai`
+## 📄 License
 
-### Blockchain
-- Web3.js for Ethereum integration
-- Configure blockchain settings in `src/lib/web3.ts`
-- Test blockchain features with `npm run test:web3`
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contributing
+## 🌐 Community
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- [Discord](https://discord.gg/cerebra)
+- [Twitter](https://twitter.com/CerebraAI)
+- [GitHub](https://github.com/CerebraDEV)
 
-## Project Links
+## 🙏 Acknowledgments
 
-- Website: https://www.cerebra.work
-- Twitter: https://x.com/Cerebra_X
-- GitHub: https://github.com/CerebraDEV/Cerebra
+- Ethereum Foundation
+- Web3Modal Team
+- Next.js Team
+- All our contributors and supporters
 
-## Roadmap
+---
 
-### Phase 1: Memory Sci-fi Foundation (2024 Q2-Q3)
-- Token fair launch
-- Single memory fragment transformation
-- Basic image and text conversion
-- Initial sci-fi style library
-
-### Phase 2: Multimedia Expansion (2024 Q4-2025 Q1)
-- Video memory transformation
-- Multi-memory narrative system
-- Personal sci-fi universe builder
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/CerebraDEV/Cerebra/blob/main/LICENSE) file for details.
-
-## Contact
-
-For any inquiries about the CEREBRA project, please visit our website at https://www.cerebra.work 
+<div align="center">
+  <p>Built with ❤️ by the CEREBRA Team</p>
+  <p>© 2025 CEREBRA. All rights reserved.</p>
+</div> 
