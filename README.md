@@ -2,31 +2,52 @@
 
 <div align="center">
   <img src="public/images/logo.svg" alt="CEREBRA Logo" width="200" height="200" style="border-radius: 20px; margin: 20px 0;" />
-  <h1>CEREBRA - Decentralized AI Training Platform</h1>
+  <h1>CEREBRA - Transform Your Memories Into Sci-Fi Masterpieces</h1>
   <p>
-    <strong>A blockchain-powered platform for training and monetizing AI models</strong>
+    <strong>A revolutionary platform that transforms your ordinary memories into extraordinary sci-fi narratives</strong>
   </p>
 </div>
 
 ## 🚀 Overview
 
-CEREBRA is a decentralized platform that enables AI developers to train, share, and monetize their AI models using blockchain technology. The platform combines the power of Web3 with artificial intelligence to create a new ecosystem for AI model development and distribution.
+CEREBRA is a revolutionary platform dedicated to transforming personal memory fragments into unique sci-fi story experiences. Leveraging cutting-edge AI technology, the platform takes user-provided memory fragments as prototypes and reconstructs these everyday experiences into sci-fi narratives, creating personalized immersive stories that are vividly presented through text, images, and videos. CEREBRA is not just a memory preservation tool, but a personal story factory that transforms ordinary moments of life into magnificent sci-fi epics.
 
-## ✨ Features
+### Vision
+To transform everyone's memory fragments into unique sci-fi artworks, making ordinary life experiences radiate extraordinary charm, and creating parallel universe stories that belong to each individual through technology.
 
-- **NFT Marketplace**: Tokenize and trade AI models as NFTs
-- **Decentralized Training**: Train AI models using distributed computing resources
-- **Community Governance**: Token holders participate in platform decisions
-- **Rewards System**: Earn tokens for contributing to the ecosystem
-- **Secure Storage**: Decentralized storage for AI models and data
-- **Web3 Integration**: Seamless wallet connection and blockchain interactions
+## ✨ Core Technologies & Features
+
+### 1. Memory Fragment Transmuter
+- **Memory Fragment Collection**: Capture specific memory fragments such as photos, journals, oral memories, or significant life events
+- **Memory Prototype Analysis**: AI deep analysis of core elements, emotional layers, and character relationships in memory fragments
+- **Sci-Fi Element Injection**: Reconstruct daily memories into sci-fi scenes while preserving the original emotional core
+- **Personalized Sci-Fi Universe**: Create a unique sci-fi worldview for each user, where all memory stories unfold
+- **Multiple Sci-Fi Styles**: Choose from cyberpunk, space exploration, time travel, parallel universes, and more
+
+### 2. Multi-format Sci-Fi Expression System
+- **Memory to Visual**: Transform memory fragments directly into high-quality sci-fi style images
+- **Sci-Fi Scene Rendering**: Generate sci-fi scenes from user memories, like transforming a family dinner into a reunion aboard a starship
+- **Memory Video Conversion**: Create sci-fi short videos based on user memories with appropriate sound effects and atmosphere
+- **Scene Connection Narrative**: Cleverly connect multiple memory scenes through sci-fi elements to form coherent storylines
+
+### 3. Personal Memory Sci-Fi Toolkit
+- **Memory Protagonist**: Cast users as central characters in their sci-fi stories while maintaining personality traits
+- **Relationship Sci-Fi Reshaping**: Transform important people in users' lives into sci-fi characters
+- **Scene Alienation**: Transform familiar places into sci-fi environments
+- **Memory Linker**: Creatively connect different memory fragments to form complete sci-fi narratives
+
+### 4. Memory-based Sci-Fi Content Hub
+- **Multi-format Sci-Fi Stories**: Present complete sci-fi stories through text, image collections, short videos, or interactive narratives
+- **Memory Sci-Fi NFTs**: Mint transformed memory sci-fi works as unique NFTs
+- **Privacy and Sharing Control**: Precise control over the privacy level and sharing scope of sci-fi memories
+- **Sci-Fi Memory Collections**: Create themed sci-fi memory collections
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: Next.js 14, React, Tailwind CSS, Framer Motion
-- **Blockchain**: Ethereum, Solidity, Web3Modal
-- **AI/ML**: TensorFlow, PyTorch, Scikit-learn
-- **Storage**: IPFS, Filecoin
+- **AI/ML**: Advanced AI models for memory analysis and transformation
+- **Blockchain**: Ethereum, Solidity, Web3Modal for NFT integration
+- **Storage**: IPFS, Filecoin for decentralized content storage
 - **Authentication**: NextAuth.js
 - **Testing**: Jest, Vitest, React Testing Library
 
